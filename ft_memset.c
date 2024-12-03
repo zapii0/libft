@@ -6,11 +6,11 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:39 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/02 17:09:13 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/03 19:27:41 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	*ft_memset(void *s, char c, int n)
 {

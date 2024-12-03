@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:08:03 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/02 18:47:53 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/03 19:27:51 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    ft_bzero(void *s, size_t n)
 {
-    int i;
+    unsigned long i;
     char *str;
 
     i = 0;

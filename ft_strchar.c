@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 17:07:41 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/03 19:27:47 by mzapora          ###   ########.fr       */
+/*   Created: 2024/12/03 19:22:12 by mzapora           #+#    #+#             */
+/*   Updated: 2024/12/03 19:27:40 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ascii(int c)
+char	*strchr(const char *s, int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return (s[i]);
+		i++;
+	}
 }

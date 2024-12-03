@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:33:20 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/02 18:43:56 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/03 19:27:42 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	unsigned long	i;
 	int	flag;
 	
 	i = 0;
