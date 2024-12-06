@@ -6,11 +6,10 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:24:20 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/04 17:22:52 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/06 18:59:11 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -21,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char *)(s + 1));
+			return ((char *)(s + i));
 		i--;
 	}
 	return (0);

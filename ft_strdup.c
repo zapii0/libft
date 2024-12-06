@@ -1,20 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 19:04:06 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/05 19:34:51 by mzapora          ###   ########.fr       */
+/*   Created: 2024/12/05 13:23:36 by mzapora           #+#    #+#             */
+/*   Updated: 2024/12/05 14:31:24 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char *ft_strdup(const char *s)
 {
-	if (c > 96 && c < 123)
-		c = c - 32;
-	return (c);
+    char	*dest;
+    int		i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	dest = malloc(i + 1);
+	if (dest == NULL)
+		return (dest);
+	i = 0;
+	while (s[i])
+	{
+		dest[i] = s[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
+/*int main(void)
+{
+	const char *s = "jdkaskaskdakdabcd123";
+	char 		*result;
+	result = ft_strdup(s);
+	printf("%s", result);
+	return (0);
+}*/
+ 

@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:39 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/04 16:44:11 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/05 19:19:03 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 int	*ft_memset(void *s, char c, int n)
 {
-	char	*str;
+	unsigned char	*str;
 	int	i;
-
+	
 	i = 0;
 	str = s;
 	while (i < n)
 	{
-		str[i] = c;
+		*str = c;
+		str++;
 		i++;
 	}
 	return (s);

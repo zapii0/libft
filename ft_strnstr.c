@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 18:51:22 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/04 22:59:14 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/05 10:58:24 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strnstr(const char *big,	const char *little, size_t len)
 	size_t		i;
 	size_t		j;
 	size_t		k;
-	size_t		l;
 
 	i = 0;
 	k = 0;

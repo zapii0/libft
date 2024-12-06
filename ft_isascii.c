@@ -6,13 +6,13 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:07:41 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/04 16:44:15 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/05 19:33:24 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
