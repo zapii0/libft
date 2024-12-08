@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/05 14:32:40 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/08 07:33:33 by mzapora          ###   ########.fr       */
+/*   Created: 2024/12/08 07:10:50 by mzapora           #+#    #+#             */
+/*   Updated: 2024/12/08 07:36:21 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+/*size_t ft_strlen(const char *s)
 {
     size_t i;
 
@@ -22,40 +22,37 @@ size_t ft_strlen(const char *s)
         i++;
     }
     return ((size_t)i);
-}
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+}*/
+char *ft_strjoin(char const *s1, char const *s2)
 {
+	int	i;
+	int	j;
 	char *dest;
-	size_t	i;
-	size_t len1;
+	unsigned char *d;
+	unsigned char *p;
 
-	len1 = ft_strlen(s);
-	if (!s)
-		return (NULL);
-	  if (start >= len1)
-        return (ft_strdup(""));
-	if (start + len > len1)
-        len = len1 - start;
-	dest = malloc(len + 1);
+	p = (unsigned char *)s1;
+	d = (unsigned char *)s2;
+	i = ft_strlen(s1);
+	j = ft_strlen(s2);
+	dest = malloc(i + j + 1);
 	if (dest == NULL)
 		return (NULL);
-	i = 0;
-	while (i < len && s[i + start] != '\0')
-	{
-		dest[i] = s[start + i];
-		i++;
-	}
-	dest[i] = '\0';
-	return ((char *)dest);
+	i = -1;
+	while (p[++i])
+		dest[i] = p[i];
+	j = -1;
+	while (d[++j])
+		dest[i + j] = d[j];
+	dest[i + j] = '\0';
+	return (dest);
 }
 /*int	main(void)
 {
-	char const *s = "0123456789";
-	unsigned int start = 1;
-	size_t len = 3;
+	const char *s1 = "123456";
+	const char *s2 = "7890";
 	char *result;
-	result = ft_substr(s, start, len);
-	printf("%s", result);
+	result = ft_strjoin(s1, s2);
+	printf ("%s", result);
 	return (0);
 }*/
-

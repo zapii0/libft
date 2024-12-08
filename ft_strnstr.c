@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 18:51:22 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/05 10:58:24 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/08 00:14:29 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,20 @@ char	*ft_strnstr(const char *big,	const char *little, size_t len)
 	size_t		j;
 	size_t		k;
 
-	i = 0;
 	k = 0;
 	j = 0;
-	while (little[i])
-		i++;
-	while (big[j] != '\0' && j + i < len)
+	i = ft_strlen(little);
+	if (i == 0)
+		return ((char *)big);
+	while (big[j] != '\0' && j + i <= len)
 	{
 		if (big[j] == little[0])
 		{
 			k = 0;
-			while (big[j + k] == little[k] && j + k < len)
-			{
+			while (k < i && big[j + k] == little[k])
 				k++;
-				if (k == i)
-					return ((char *)big + j);
-			}
+			if (k == i)
+				return ((char *)big + j);
 		}
 		j++;
 	}
@@ -41,9 +39,9 @@ char	*ft_strnstr(const char *big,	const char *little, size_t len)
 }
 /*int	main(void)
 {
-	const char *big = "12123dsadasd1215abcd1231312123";
+	const char *big = "aabcabcd";
 	const char *little = "abcd";
-	size_t		len = 25;
+	size_t		len = 9;
 	char 		*result = ft_strnstr(big, little, len);
 	printf("%s", result);
 	return (0);
