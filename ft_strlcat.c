@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:41:51 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/07 23:58:46 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/12 15:49:19 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ int	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 	size_t	k;
-	unsigned char	*s;
-
-	s = (unsigned char *)src;
+	
 	i = ft_strlen(dst);
 	k = ft_strlen(src);
 	j = 0;

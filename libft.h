@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:48 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/10 15:52:30 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/12 17:46:50 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdlib.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -44,4 +45,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 #endif
