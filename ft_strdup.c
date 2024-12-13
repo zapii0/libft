@@ -6,16 +6,16 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:23:36 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/05 14:31:24 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:08:41 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char	*dest;
-    int		i;
+	char		*dest;
+	int			i;
 
 	i = 0;
 	while (s[i])
@@ -39,5 +39,4 @@ char *ft_strdup(const char *s)
 	result = ft_strdup(s);
 	printf("%s", result);
 	return (0);
-}*/
- 
+}*/ 

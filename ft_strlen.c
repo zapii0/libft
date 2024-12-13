@@ -6,20 +6,20 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:58 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/08 05:47:10 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:11:51 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return ((size_t)i);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return ((size_t)i);
 }

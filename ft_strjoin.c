@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 07:10:50 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/08 07:36:21 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:09:49 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@
     }
     return ((size_t)i);
 }*/
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	j;
-	char *dest;
-	unsigned char *d;
-	unsigned char *p;
+	int				i;
+	int				j;
+	char			*dest;
+	unsigned char	*d;
+	unsigned char	*p;
 
 	p = (unsigned char *)s1;
 	d = (unsigned char *)s2;

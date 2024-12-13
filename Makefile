@@ -6,7 +6,7 @@
 #    By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 11:30:58 by mzapora           #+#    #+#              #
-#    Updated: 2024/12/12 23:25:07 by mzapora          ###   ########.fr        #
+#    Updated: 2024/12/13 02:48:46 by mzapora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,12 @@ OBJS =	${SRC:.c=.o}
 NAME = libft.a
 
 AR = ar rcs
+
+typedef struct	s_list
+{
+void	*content;
+struct	s_list *next;
+}			t_list;
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) -o $(OBJS) 

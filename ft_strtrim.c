@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 08:22:33 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/08 09:59:17 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:15:37 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,23 @@ int	ft_fromback(char const *s1, char const *set)
 	while (i >= 0)
 	{
 		if (!ft_strchr(set, s1[i]))
-			break;
+			break ;
 		i--;
 	}
-	return i;
+	return (i);
 }
 int	ft_fromstart(char const *s1, char const *set)
 {
 	int	i;
+
 	i = 0;
 	while (s1[i])
 	{
-		if(!ft_strchr(set, s1[i]))
-			break;
+		if (!ft_strchr(set, s1[i]))
+			break ;
 		i++;
 	}
-	return i;
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

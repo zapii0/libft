@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:24:20 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/06 18:59:11 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:14:24 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
-	
+
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
@@ -33,4 +33,3 @@ char	*ft_strrchr(const char *s, int c)
         printf("Znaleziono: %s\n", ft_strrchr(s, c));
     return 0;
 }*/
-

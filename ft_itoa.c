@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:55:22 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/12 19:35:16 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 02:56:54 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 static char	*memaloc(int j)
 {
-	char *str;
-	
+	char	*str;
+
 	str = (char *)malloc(j + 1);
 	if (str == NULL)
 		return (NULL);
 	return (str);
 }
+
 static unsigned int	len(int n)
 {
 	unsigned int	i;
@@ -37,11 +38,12 @@ static unsigned int	len(int n)
 	}
 	return (i);
 }
+
 char	*ft_itoa(int n)
 {
 	unsigned int		j;
 	unsigned int		num;
-	char	*result;
+	char				*result;
 
 	j = len(n);
 	result = memaloc(j);

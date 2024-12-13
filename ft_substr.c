@@ -6,36 +6,37 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:32:40 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/08 07:33:33 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:17:45 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return ((size_t)i);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return ((size_t)i);
 }
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *dest;
+	char	*dest;
 	size_t	i;
-	size_t len1;
+	size_t	len1;
 
 	len1 = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	  if (start >= len1)
-        return (ft_strdup(""));
+	if (start >= len1)
+		return (ft_strdup(""));
 	if (start + len > len1)
-        len = len1 - start;
+		len = len1 - start;
 	dest = malloc(len + 1);
 	if (dest == NULL)
 		return (NULL);
@@ -48,6 +49,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return ((char *)dest);
 }
+
 /*int	main(void)
 {
 	char const *s = "0123456789";
@@ -58,4 +60,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	printf("%s", result);
 	return (0);
 }*/
-

@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:31:13 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/06 17:20:27 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 02:51:49 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 int	ft_atoi(const char *nptr)
 {
 	int	i;	
-	int num;
-	int flag;
+	int	num;
+	int	flag;
 	int	m;
 
 	flag = 0;
