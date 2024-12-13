@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 08:22:33 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/13 03:15:37 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 03:21:21 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	ft_fromback(char const *s1, char const *set)
 	}
 	return (i);
 }
+
 int	ft_fromstart(char const *s1, char const *set)
 {
 	int	i;
