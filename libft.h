@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:48 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/13 03:20:15 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/13 23:43:39 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdlib.h>
 # include <limits.h>
 
+typedef struct	s_list
+{
+void	*content;
+struct	s_list *next;
+}			t_list;
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
