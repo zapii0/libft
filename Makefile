@@ -6,7 +6,7 @@
 #    By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 11:30:58 by mzapora           #+#    #+#              #
-#    Updated: 2024/12/14 22:27:26 by mzapora          ###   ########.fr        #
+#    Updated: 2024/12/15 21:33:56 by mzapora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_toupper.c ft_tolower.c ft_strrchr.c ft_strncmp.c ft_strchr.c ft_memchr.c ft_m
 ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BONUS = ft_lstadd_front_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-ft_lstclear_bonus.c ft_lstiteri_bonus.c
+ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS =	${SRC:.c=.o}
 
