@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:55:22 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/13 02:56:54 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/15 23:43:04 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,28 @@ static unsigned int	len(int n)
 	return (i);
 }
 
+static char	*strcreate(int num, int j, char *result)
+{
+	while (num)
+	{
+		result[--j] = (num % 10) + '0';
+		num /= 10;
+	}
+	return (result);
+}
+
 char	*ft_itoa(int n)
 {
 	unsigned int		j;
 	unsigned int		num;
 	char				*result;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	j = len(n);
 	result = memaloc(j);
+	if (!result)
+		return (NULL);
 	result[j] = '\0';
 	if (n == 0)
 	{
@@ -60,11 +74,7 @@ char	*ft_itoa(int n)
 	}
 	else
 		num = (unsigned int)n;
-	while (num)
-	{
-		result[--j] = (num % 10) + '0';
-		num /= 10;
-	}
+	result = strcreate(num, j, result);
 	return (result);
 }
 /*int	main(void)

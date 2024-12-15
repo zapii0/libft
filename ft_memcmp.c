@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:43:42 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/13 02:59:05 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/15 23:19:54 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char	*a;
-	const char	*b;
-	size_t		i;
+	unsigned char	*a;
+	unsigned char	*b;
 
-	i = 0;
-	a = (const char *)s1;
-	b = (const char *)s2;
-	if (n == 0)
+	if (!s2 || !s1 || n == 0)
 		return (0);
-	while (n--)
+	a = (unsigned char *)s1;
+	b = (unsigned char *)s2;
+	while (n > 0)
 	{
-		if (b[i] != a[i])
-			return (b[i] - a[i]);
-		i++;
+		if (*a != *b)
+			return (*a - *b);
+		a++;
+		b++;
+		n--;
 	}
 	return (0);
 }

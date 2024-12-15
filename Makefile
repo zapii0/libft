@@ -6,7 +6,7 @@
 #    By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 11:30:58 by mzapora           #+#    #+#              #
-#    Updated: 2024/12/15 21:33:56 by mzapora          ###   ########.fr        #
+#    Updated: 2024/12/15 23:41:52 by mzapora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ AR = ar rcs
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS) 
 
-%.o: %.c
+bonus/%.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
 bonus: $(OBJS) $(OBJSB)

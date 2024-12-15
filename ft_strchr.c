@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 19:22:12 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/06 18:54:52 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/15 23:35:55 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (c > 255)
-		return ((char *)s);
-	if (!c)
+	if (c == '\0')
 		return ((char *)s + i);
-	return (0);
+	return (NULL);
 }

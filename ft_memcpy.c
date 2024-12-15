@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:29 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/13 02:59:36 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/15 23:28:54 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned long	i;
-	char			*sr;
-	char			*ds;
+	unsigned char			*sr;
+	unsigned char			*ds;
 
-	sr = (char *)src;
-	ds = (char *)dest;
-	i = 0;
-	while (i < n)
+	if (!dest || !src)
+		return (0);
+	sr = (unsigned char *)src;
+	ds = (unsigned char *)dest;
+	while (n > 0)
 	{
-		*ds = *sr;
-		i++;
-		ds++;
-		sr++;
+		ds[n - 1] = sr[n - 1];
+		n--;
 	}
 	return (ds);
 }

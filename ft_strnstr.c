@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 18:51:22 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/13 03:13:48 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/15 22:47:47 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	k = 0;
 	j = 0;
 	i = ft_strlen(little);
+	if (!big)
+		return (0);
 	if (i == 0)
 		return ((char *)big);
 	while (big[j] != '\0' && j + i <= len)
