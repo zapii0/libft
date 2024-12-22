@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:48 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/15 21:50:32 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/16 17:32:50 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdlib.h>
+# include <stdio.h>
 # include <limits.h>
 
 typedef struct s_list

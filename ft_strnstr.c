@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 18:51:22 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/15 22:47:47 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/16 17:16:37 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t		j;
 	size_t		k;
 
-	k = 0;
-	j = 0;
 	i = ft_strlen(little);
-	if (!big)
+	if (!big && len == 0)
 		return (0);
 	if (i == 0)
 		return ((char *)big);
-	while (big[j] != '\0' && j + i <= len)
+	j = 0;
+	while (big[j] != '\0' && j + i <= len && big[j + i - 1] != '\0')
 	{
 		if (big[j] == little[0])
 		{

@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:33:20 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/15 23:37:13 by mzapora          ###   ########.fr       */
+/*   Updated: 2024/12/16 17:18:16 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	d = (unsigned char *)dest;
 	i = 0;
-	if (!dest || !src || !n)
+	if (!dest && !src)
 		return (dest);
 	if (d > s)
 	{
